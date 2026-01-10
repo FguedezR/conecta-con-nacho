@@ -1,0 +1,47 @@
+---
+import { ScrollReveal } from './ScrollReveal';
+---
+<section id="social" class="py-40 bg-nacho-blanco px-6 md:px-20">
+    <ScrollReveal client:load>
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="max-w-2xl">
+                <p class="text-nacho-azul font-bold mb-4 uppercase tracking-widest text-[10px]">04. Look & Feel</p>
+                <h2 class="text-6xl md:text-8xl font-zalando font-bold tracking-tighter uppercase leading-none">Universo<br/><span class="text-nacho-azul italic">Social Media</span></h2>
+            </div>
+        </div>
+    </ScrollReveal>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Preview YT -->
+        <ScrollReveal client:load>
+            <div class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl shadow-nacho-azul/10">
+                <div class="aspect-video bg-nacho-azul/20 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-nacho-azul opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <span class="text-nacho-lima font-bold italic text-xl tracking-widest group-hover:scale-110 transition-transform duration-700 underline decoration-2 underline-offset-8">YOUTUBE_THUMBNAIL</span>
+                </div>
+                <div class="p-10 border-t border-white/5 flex justify-between items-center">
+                    <p class="text-nacho-blanco text-xl font-bold italic">Miniaturas de alto impacto</p>
+                    <div class="w-10 h-10 rounded-full bg-nacho-lima flex items-center justify-center">
+                        <div class="w-2 h-2 bg-nacho-azul rotate-45"></div>
+                    </div>
+                </div>
+            </div>
+        </ScrollReveal>
+
+        <!-- Preview IG -->
+        <ScrollReveal client:load delay={0.2}>
+            <div class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl shadow-nacho-lima/10">
+                <div class="aspect-video bg-nacho-lima/20 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-nacho-lima opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <span class="text-nacho-azul font-bold italic text-xl tracking-widest group-hover:scale-110 transition-transform duration-700 underline decoration-2 underline-offset-8">INSTAGRAM_REEL</span>
+                </div>
+                <div class="p-10 border-t border-white/5 flex justify-between items-center">
+                    <p class="text-nacho-blanco text-xl font-bold italic">Contenido vertical & Reels</p>
+                    <div class="w-10 h-10 rounded-full bg-nacho-azul flex items-center justify-center text-nacho-lima">
+                         <div class="w-2 h-2 bg-nacho-lima rotate-45"></div>
+                    </div>
+                </div>
+            </div>
+        </ScrollReveal>
+    </div>
+</section>

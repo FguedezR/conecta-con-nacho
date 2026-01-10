@@ -1,0 +1,46 @@
+---
+import { ScrollReveal } from './ScrollReveal';
+---
+<section class="py-40 bg-nacho-negro text-nacho-blanco px-6 md:px-20 rounded-t-[3rem] md:rounded-t-[5rem]">
+    <ScrollReveal client:load>
+        <p class="text-nacho-lima font-bold mb-20 uppercase tracking-widest text-[10px]">03. Paleta de Colores</p>
+    </ScrollReveal>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Principal Lima -->
+        <ScrollReveal client:load>
+            <div class="group rounded-[2.5rem] bg-nacho-lima p-12 h-[450px] flex flex-col justify-between text-nacho-azul transition-transform duration-500 hover:scale-[1.01]">
+                <span class="text-8xl font-bold opacity-10 uppercase tracking-tighter">Core</span>
+                <div>
+                    <h3 class="text-5xl font-bold italic tracking-tighter">Electric Lima</h3>
+                    <p class="text-xl font-mono mt-2 opacity-80">#E9FF27</p>
+                </div>
+            </div>
+        </ScrollReveal>
+
+        <!-- Principal Azul -->
+        <ScrollReveal client:load delay={0.2}>
+            <div class="group rounded-[2.5rem] bg-nacho-azul p-12 h-[450px] flex flex-col justify-between text-nacho-blanco transition-transform duration-500 hover:scale-[1.01]">
+                <span class="text-8xl font-bold opacity-10 uppercase tracking-tighter italic">Depth</span>
+                <div>
+                    <h3 class="text-5xl font-bold italic tracking-tighter">Deep Ocean</h3>
+                    <p class="text-xl font-mono mt-2 opacity-80">#000DFF</p>
+                </div>
+            </div>
+        </ScrollReveal>
+
+        <!-- Secundarios -->
+        <ScrollReveal client:load delay={0.3}>
+            <div class="rounded-[2rem] bg-nacho-blanco/5 border border-white/10 p-8 flex justify-between items-center text-nacho-blanco">
+                <span class="font-bold tracking-widest text-sm uppercase">Rich Black</span>
+                <span class="font-mono opacity-50">#1B1D1C</span>
+            </div>
+        </ScrollReveal>
+        <ScrollReveal client:load delay={0.4}>
+            <div class="rounded-[2rem] bg-white/10 border border-white/10 p-8 flex justify-between items-center text-nacho-blanco">
+                <span class="font-bold tracking-widest text-sm uppercase">Pure White</span>
+                <span class="font-mono opacity-50">#FAFAFA</span>
+            </div>
+        </ScrollReveal>
+    </div>
+</section>
