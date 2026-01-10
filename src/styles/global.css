@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+    /* Definimos tus colores personalizados */
+    --color-nacho-lima: #E9FF27;
+    --color-nacho-azul: #000DFF;
+    --color-nacho-negro: #1B1D1C;
+    --color-nacho-blanco: #FAFAFA;
+
+    /* Definimos tu tipografía */
+    --font-zalando: "Zalando Sans SemiExpanded", sans-serif;
+}
+
+/* Aquí cargamos la fuente (asegúrate de tener el archivo en public/fonts/) */
+@font-face {
+    font-family: 'Zalando Sans SemiExpanded';
+    src: url('/fonts/ZalandoSans-SemiExpanded.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-family: var(--font-zalando);
+    background-color: var(--color-nacho-blanco);
+    color: var(--color-nacho-negro);
+}

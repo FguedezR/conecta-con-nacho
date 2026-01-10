@@ -1,16 +1,15 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main
+    class="min-h-screen flex flex-col items-center justify-center bg-nacho-negro text-nacho-lima p-10">
+    <h1 class="text-6xl font-zalando font-bold mb-4">CONECTA CON NACHO</h1>
+    <p class="text-nacho-blanco text-xl">Nueva Identidad Visual</p>
+    <div class="mt-8 flex gap-4">
+      <div class="w-20 h-20 bg-nacho-lima rounded-full"></div>
+      <div class="w-20 h-20 bg-nacho-azul rounded-full"></div>
+    </div>
+  </main>
+</Layout>
