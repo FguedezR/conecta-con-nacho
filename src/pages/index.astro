@@ -1,15 +1,84 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import { RevealText } from '../components/RevealText';
 ---
 
 <Layout>
-  <main
-    class="min-h-screen flex flex-col items-center justify-center bg-nacho-negro text-nacho-lima p-10">
-    <h1 class="text-6xl font-zalando font-bold mb-4">CONECTA CON NACHO</h1>
-    <p class="text-nacho-blanco text-xl">Nueva Identidad Visual</p>
-    <div class="mt-8 flex gap-4">
-      <div class="w-20 h-20 bg-nacho-lima rounded-full"></div>
-      <div class="w-20 h-20 bg-nacho-azul rounded-full"></div>
-    </div>
+  <Navbar />
+  
+  <main class="bg-nacho-blanco overflow-x-hidden">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="h-screen w-full flex flex-col items-center justify-center bg-[#0a0a0a] text-nacho-blanco px-4 overflow-hidden relative">
+      
+      <!-- Fondo sutil con ruido o gradiente -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#1a1a1a,transparent)] opacity-50"></div>
+
+      <div class="relative z-10 text-center">
+        <div class="mb-4">
+          <RevealText client:load text="PRESENTACIÓN DE MARCA" delay={0.2} />
+        </div>
+        
+        <h1 class="text-[12vw] md:text-[10vw] font-zalando font-bold leading-[0.85] tracking-tighter">
+          <div class="group relative inline-block">
+            <RevealText client:load text="CONECTA" delay={0.4} />
+            <!-- IMAGEN QUE APARECE AL HOVER -->
+            <div class="absolute -top-20 -right-20 w-64 h-40 opacity-0 group-hover:opacity-100 group-hover:rotate-6 transition-all duration-500 pointer-events-none z-50">
+               <div class="w-full h-full bg-nacho-lima rounded-xl shadow-2xl overflow-hidden flex items-center justify-center text-nacho-azul text-xl italic p-4">
+                  Ejemplo de Look & Feel
+               </div>
+            </div>
+          </div>
+          <br />
+          <span class="text-nacho-lima italic">
+            <RevealText client:load text="CON NACHO" delay={0.6} />
+          </span>
+        </h1>
+
+        <div class="mt-12 max-w-lg mx-auto text-nacho-blanco/50 text-lg uppercase tracking-widest">
+           <RevealText client:load text="Desliza para explorar el nuevo universo visual" delay={0.8} />
+        </div>
+      </div>
+
+      <!-- Indicador de scroll minimalista -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-nacho-lima to-transparent opacity-50"></div>
+    </section>
+
+    <!-- SECCIÓN MARCA (COLORES Y TIPOGRAFÍA) -->
+    <section id="marca" class="min-h-screen py-32 px-10 bg-nacho-blanco">
+       <!-- Repite la lógica de cuadrículas de colores aquí -->
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+          <div class="sticky top-32 h-fit">
+            <h2 class="text-6xl font-bold mb-8">El Sistema<br/>Visual</h2>
+            <p class="text-xl text-nacho-negro/60 max-w-sm">
+                Basado en el contraste extremo. El azul profundo aporta profesionalidad, mientras que el lima eléctrico inyecta la energía necesaria para destacar en el feed.
+            </p>
+          </div>
+          
+          <div class="flex flex-col gap-4">
+             <div class="h-[500px] bg-nacho-azul rounded-3xl p-10 text-nacho-lima flex flex-col justify-between">
+                <span class="text-8xl font-bold">Aa</span>
+                <div>
+                   <p class="text-2xl uppercase tracking-widest font-bold">Zalando Sans</p>
+                   <p class="opacity-60">Tipografía principal</p>
+                </div>
+             </div>
+             <div class="h-64 bg-nacho-lima rounded-3xl p-10 flex items-center justify-center">
+                <span class="text-nacho-azul text-4xl font-bold tracking-tighter">#E9FF27</span>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- SECCIÓN SOCIAL -->
+    <section id="social" class="py-32 bg-nacho-negro px-10 rounded-t-[3rem]">
+        <h2 class="text-nacho-lima text-5xl font-bold mb-20 text-center italic">Ready for Social Media</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Repite los placeholders de miniaturas aquí con hover:grayscale-0 grayscale transition-all -->
+            <div class="aspect-video bg-white/5 rounded-2xl hover:scale-[1.02] transition-transform"></div>
+            <div class="aspect-video bg-white/5 rounded-2xl hover:scale-[1.02] transition-transform"></div>
+            <div class="aspect-video bg-white/5 rounded-2xl hover:scale-[1.02] transition-transform"></div>
+        </div>
+    </section>
   </main>
 </Layout>

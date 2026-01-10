@@ -25,3 +25,19 @@
     background-color: var(--color-nacho-blanco);
     color: var(--color-nacho-negro);
 }
+
+/* motion */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.antigravity {
+  animation: float 6s ease-in-out infinite;
+}
+
+.antigravity-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
