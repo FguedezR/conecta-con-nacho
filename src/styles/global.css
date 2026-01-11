@@ -34,11 +34,21 @@ body {
 
 /* Aquí cargamos la fuente (asegúrate de tener el archivo en public/fonts/) */
 @font-face {
-    font-family: 'Zalando Sans SemiExpanded';
-    src: url('/fonts/ZalandoSans-SemiExpanded.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Zalando Sans SemiExpanded';
+  /* Si tu archivo se llama, por ejemplo: ZalandoSans-Regular.ttf */
+  src: url('../../public/fonts/ZalandoSansSemiExpanded-Regular.ttf') format('truetype'); 
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zalando Sans SemiExpanded';
+  /* Si tu archivo se llama, por ejemplo: ZalandoSans-Bold.ttf */
+  src: url('../../public/fonts/ZalandoSansSemiExpanded-Bold.ttf') format('truetype'); 
+  font-weight: 700; /* Negrita */
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
