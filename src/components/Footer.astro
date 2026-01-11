@@ -1,0 +1,50 @@
+---
+import { ScrollReveal } from "./ScrollReveal"
+---
+
+<footer
+  class="relative bg-nacho-azul py-20 overflow-hidden rounded-t-[3rem] md:rounded-t-[5rem]"
+>
+  <!-- Texto Marquee Infinito fondo -->
+  <div
+    class="absolute top-0 left-0 w-full overflow-hidden opacity-20 pointer-events-none select-none"
+  >
+    <div
+      class="animate-marquee whitespace-nowrap text-[20vw] font-zalando font-bold text-nacho-lima uppercase"
+    >
+      CONECTA CON NACHO • CONECTA CON NACHO • CONECTA CON NACHO • CONECTA CON
+      NACHO •
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    <ScrollReveal client:load>
+      <h2
+        class="text-6xl md:text-[5rem] font-zalando font-bold text-nacho-blanco tracking-tighter uppercase leading-none mb-10"
+      >
+        ¿LISTO PARA EL <br />
+        <span class="text-nacho-lima italic">SIGUIENTE NIVEL?</span>
+      </h2>
+
+      <!-- <div class="flex flex-col md:flex-row items-center justify-center gap-8 mt-20">
+                <a href="mailto:hola@nacho.com" class="group relative px-12 py-6 bg-nacho-lima text-nacho-azul font-zalando font-bold rounded-full text-xl overflow-hidden transition-all hover:scale-105">
+                    <span class="relative z-10">HABLEMOS AHORA</span>
+                    <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                </a>
+                
+                <div class="flex gap-6">
+                    <a href="#" class="text-nacho-blanco/60 hover:text-nacho-lima transition-colors font-bold tracking-widest text-xs uppercase">Instagram</a>
+                    <a href="#" class="text-nacho-blanco/60 hover:text-nacho-lima transition-colors font-bold tracking-widest text-xs uppercase">YouTube</a>
+                    <a href="#" class="text-nacho-blanco/60 hover:text-nacho-lima transition-colors font-bold tracking-widest text-xs uppercase">LinkedIn</a>
+                </div>
+            </div> -->
+
+      <div
+        class="mt-40 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/30 tracking-[0.3em] uppercase font-bold"
+      >
+        <p>© 2026 CONECTA CON NACHO • ALL RIGHTS RESERVED</p>
+        <p>DESIGNED BY Fer • ASTRO CORE V4</p>
+      </div>
+    </ScrollReveal>
+  </div>
+</footer>

@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import ytThumb from "../assets/images/social/youtube-01.webp";
+import ytThumb2 from "../assets/images/social/youtube-02.webp";
+import ytThumb3 from "../assets/images/social/youtube-03.webp";
+import igPost from "../assets/images/social/instagram-01.webp";
+
+// Duplicamos las imágenes para que el loop sea infinito sin saltos
+const row1 = [ytThumb, ytThumb2, ytThumb3, ytThumb, ytThumb2, ytThumb3];
+const row2 = [ytThumb, ytThumb2, ytThumb3, ytThumb, ytThumb2, ytThumb3];
+---
+
+<section class="py-20 bg-nacho-blanco overflow-hidden relative">
+  <!-- Efecto de difuminado lateral (Máscara) -->
+  <div
+    class="absolute inset-0 z-10 pointer-events-none shadow-[inset_120px_0_120px_-120px_#FAFAFA,inset_-120px_0_120px_-120px_#FAFAFA]"
+  >
+  </div>
+
+  <div class="flex flex-col gap-6">
+    <!-- PRIMERA FILA: Movimiento a la izquierda -->
+    <div class="flex overflow-hidden group">
+      <div class="flex animate-marquee gap-6 whitespace-nowrap">
+        {
+          row1.map((img) => (
+            <div class="w-64 h-36 md:w-80 md:h-44 rounded-2xl overflow-hidden border border-nacho-negro/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <Image
+                src={img}
+                alt="Preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        }
+        <!-- Repetimos el set para el loop infinito -->
+        {
+          row1.map((img) => (
+            <div class="w-64 h-36 md:w-80 md:h-44 rounded-2xl overflow-hidden border border-nacho-negro/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <Image
+                src={img}
+                alt="Preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- SEGUNDA FILA: Movimiento a la derecha -->
+    <div class="flex overflow-hidden group">
+      <div class="flex animate-marquee-reverse gap-6 whitespace-nowrap">
+        {
+          row2.map((img) => (
+            <div class="w-64 h-36 md:w-80 md:h-44 rounded-2xl overflow-hidden border border-nacho-negro/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <Image
+                src={img}
+                alt="Preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        }
+        <!-- Repetimos el set para el loop infinito -->
+        {
+          row2.map((img) => (
+            <div class="w-64 h-36 md:w-80 md:h-44 rounded-2xl overflow-hidden border border-nacho-negro/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <Image
+                src={img}
+                alt="Preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee 30s linear infinite reverse;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pausar al pasar el ratón para que Nacho pueda ver bien una miniatura */
+  .group:hover .animate-marquee,
+  .group:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+  }
+</style>

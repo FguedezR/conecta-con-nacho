@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  font-family: var(--font-zalando);
+  background-color: var(--color-nacho-blanco);
+  color: var(--color-nacho-negro);
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -10,9 +16,21 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  /* El secreto para no tener scroll horizontal feo por letras cortadas */
+  /* evitar scroll horizontal */
   overflow-x: hidden; 
   width: 100%;
+}
+
+/* COLORES */
+@theme {
+    /* Definimos colores personalizados */
+    --color-nacho-lima: #E9FF27;
+    --color-nacho-azul: #000DFF;
+    --color-nacho-negro: #1B1D1C;
+    --color-nacho-blanco: #FAFAFA;
+
+    /* Definimos tipografía */
+    --font-zalando: "Zalando Sans SemiExpanded", sans-serif;
 }
 
 /* para evitar parpadeos en renderizado */
@@ -22,24 +40,8 @@ p, span, h1, h2 {
   font-feature-settings: "kern";
 }
 
-/* Forzar que los contenedores de RevealText tengan espacio para las letras */
-.reveal-text-container {
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-}
 
-@theme {
-    /* Definimos tus colores personalizados */
-    --color-nacho-lima: #E9FF27;
-    --color-nacho-azul: #000DFF;
-    --color-nacho-negro: #1B1D1C;
-    --color-nacho-blanco: #FAFAFA;
-
-    /* Definimos tu tipografía */
-    --font-zalando: "Zalando Sans SemiExpanded", sans-serif;
-}
-
-/* Aquí cargamos la fuente (asegúrate de tener el archivo en public/fonts/) */
+/* Aquí cargamos la fuente (archivo en public/fonts/) */
 @font-face {
   font-family: 'Zalando Sans Variable';
   src: url('/fonts/ZalandoSansSemiExpanded-VariableFont_wght.ttf') format('truetype-variations');
@@ -48,6 +50,7 @@ p, span, h1, h2 {
   font-display: swap;
 }
 
+/* italic */
 @font-face {
   font-family: 'Zalando Sans Variable';
   src: url('/fonts/ZalandoSansSemiExpanded-Italic-VariableFont_wght.ttf') format('truetype-variations');
@@ -59,12 +62,6 @@ p, span, h1, h2 {
 /* Actualizamos la variable global si la tenías */
 @theme {
   --font-zalando: "Zalando Sans Variable", sans-serif;
-}
-
-:root {
-    font-family: var(--font-zalando);
-    background-color: var(--color-nacho-blanco);
-    color: var(--color-nacho-negro);
 }
 
 /* motion */
@@ -83,4 +80,35 @@ p, span, h1, h2 {
   display: inline-block;
   animation: reveal 0.8s cubic-bezier(0.33, 1, 0.68, 1) forwards;
   opacity: 0;
+}
+
+
+/* footer animacion */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+/* Máscara de desvanecimiento para carruseles */
+.fade-edges {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }

@@ -1,28 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 
-// Importamos las secciones como componentes
-import Hero from '../components/Hero.astro';
-import LogoSection from '../components/LogoSection.astro';
-import TypographySection from '../components/TypographySection.astro';
-import ColorPalette from '../components/ColorPalette.astro';
-import SocialMedia from '../components/SocialMedia.astro';
+// Importamos secciones como componentes
+import Hero from "../components/Hero.astro";
+import LogoSection from "../components/LogoSection.astro";
+import TypographySection from "../components/TypographySection.astro";
+import ColorPalette from "../components/ColorPalette.astro";
+import SocialMedia from "../components/SocialMedia.astro";
+import Footer from "../components/Footer.astro";
+import SocialCarousel from "../components/SocialCarousel.astro";
 ---
 
 <Layout title="Conecta con Nacho | Brand Identity">
   <Navbar />
-  
+
   <main class="bg-nacho-blanco">
     <Hero />
     <TypographySection />
     <ColorPalette />
     <LogoSection />
+    <!-- carrusel -->
+    <SocialCarousel /> 
+    <!-- carrusel -->
     <SocialMedia />
-    
-    <!-- Footer sencillo directo aquí o en componente -->
-    <footer class="py-20 bg-nacho-lima text-nacho-azul text-center">
-       <p class="font-bold tracking-widest uppercase text-xs">Conecta con Nacho © 2026</p>
-    </footer>
+    <!-- footer -->
+    <Footer />
   </main>
 </Layout>

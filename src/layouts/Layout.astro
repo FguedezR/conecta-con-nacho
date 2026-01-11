@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+/* favicon */
+import faviconImg from '../assets/images/logo/favicon.png';
 ---
 
 <!doctype html>
@@ -7,8 +9,8 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Conecta con Nacho</title>
+    <link rel="icon" type="image/png" href={faviconImg.src} />
+    <title>Conecta con Nacho | Comunicación con alma</title>
   </head>
   <body>
     <slot />

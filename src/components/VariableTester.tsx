@@ -15,7 +15,7 @@ export default function VariableTester() {
             Interpolating: Weight 100 — 900
           </span>
         </div>
-        <button 
+        <button
           onClick={() => setIsPaused(!isPaused)}
           className="bg-nacho-lima text-nacho-azul px-8 py-3 rounded-full font-bold text-xs uppercase hover:bg-white transition-colors"
         >
@@ -29,8 +29,8 @@ export default function VariableTester() {
           style={{ fontFamily: "'Zalando Sans Variable', sans-serif" }}
           animate={isPaused ? {} : {
             fontVariationSettings: [
-              "'wght' 100", 
-              "'wght' 900", 
+              "'wght' 100",
+              "'wght' 900",
               "'wght' 100"
             ],
             letterSpacing: ["0.05em", "-0.02em", "0.05em"]
@@ -44,17 +44,17 @@ export default function VariableTester() {
         >
           Zalando Sans
         </motion.p>
-        
+
         {/* PALABRA 2: ITALIC VARIABLE */}
         <motion.p
-          style={{ 
+          style={{
             fontFamily: "'Zalando Sans Variable', sans-serif",
-            fontStyle: "italic" 
+            fontStyle: "italic"
           }}
           animate={isPaused ? {} : {
             fontVariationSettings: [
-              "'wght' 900", 
-              "'wght' 100", 
+              "'wght' 900",
+              "'wght' 100",
               "'wght' 900"
             ],
             letterSpacing: ["-0.02em", "0.05em", "-0.02em"]
@@ -73,8 +73,8 @@ export default function VariableTester() {
       <div className="mt-20 flex justify-between items-center border-t border-white/10 pt-8">
         <div className="text-white/20 text-[10px] font-bold tracking-[0.3em]">VERSION 1.0</div>
         <div className="flex gap-4">
-             <div className="w-2 h-2 rounded-full bg-nacho-lima animate-pulse"></div>
-             <div className="w-2 h-2 rounded-full bg-nacho-azul"></div>
+          <div className="w-2 h-2 rounded-full bg-nacho-lima animate-pulse"></div>
+          <div className="w-2 h-2 rounded-full bg-nacho-azul"></div>
         </div>
       </div>
     </div>
