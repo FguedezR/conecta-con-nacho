@@ -1,68 +1,122 @@
 ---
-import { ScrollReveal } from './ScrollReveal';
+import { ScrollReveal } from "./ScrollReveal";
 
 // 1. Importas el componente de Astro
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 // 2. Importas la imagen localmente (esto es lo que evita errores de ruta)
-import ytThumb from '../assets/images/social/youtube-01.webp';
-import ytThumb2 from '../assets/images/social/youtube-02.webp';
-import ytThumb3 from '../assets/images/social/youtube-03.webp';
-import igPost from '../assets/images/social/instagram-01.webp';
+import ytThumb from "../assets/images/social/youtube-01.webp";
+import ytThumb2 from "../assets/images/social/youtube-02.webp";
+import ytThumb3 from "../assets/images/social/youtube-03.webp";
+import igPost from "../assets/images/social/instagram-01.webp";
 ---
+
 <section id="social" class="py-40 bg-nacho-blanco px-6 md:px-20">
-    <ScrollReveal client:load>
-        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+    <ScrollReveal client:visible>
+        <div
+            class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8"
+        >
             <div class="max-w-2xl">
-                <p class="text-nacho-azul font-bold mb-4 uppercase tracking-widest text-[10px]">04. Look & Feel</p>
-                <h2 class="text-6xl md:text-8xl font-zalando font-bold tracking-tighter uppercase leading-none">Universo<br/><span class="text-nacho-azul italic">Social Media</span></h2>
+                <p
+                    class="text-nacho-azul font-bold mb-4 uppercase tracking-widest text-[10px]"
+                >
+                    04. Look & Feel
+                </p>
+                <h2
+                    class="text-6xl md:text-8xl font-zalando font-bold tracking-tighter uppercase leading-none"
+                >
+                    Universo<br /><span class="text-nacho-azul italic"
+                        >Social Media</span>
+                </h2>
             </div>
         </div>
     </ScrollReveal>
 
     <!-- Contenedor en dos columnas para efecto Masonry -->
     <div class="flex flex-col md:flex-row gap-10">
-        
         <!-- COLUMNA IZQUIERDA (YouTube) -->
         <div class="flex-1 flex flex-col gap-10">
             <!-- YOUTUBE 1 -->
-            <ScrollReveal client:load>
-                <div class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-azul/20">
+            <ScrollReveal client:visible>
+                <div
+                    class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-azul/20"
+                >
                     <div class="aspect-video overflow-hidden">
-                        <Image src={ytThumb} alt="YouTube Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <Image
+                            src={ytThumb}
+                            alt="YouTube Preview"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
                     <div class="p-8">
-                        <p class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando">Plataforma</p>
-                        <p class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase">YouTube Strategy</p>
+                        <p
+                            class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando"
+                        >
+                            Plataforma
+                        </p>
+                        <p
+                            class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase"
+                        >
+                            YouTube Strategy
+                        </p>
                     </div>
                 </div>
             </ScrollReveal>
 
             <!-- YOUTUBE 2 -->
-            <ScrollReveal client:load delay={0.2}>
-                <div class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-azul/20">
+            <ScrollReveal client:visible delay={0.2}>
+                <div
+                    class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-azul/20"
+                >
                     <div class="aspect-video overflow-hidden">
-                        <Image src={ytThumb2} alt="YouTube Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <Image
+                            src={ytThumb2}
+                            alt="YouTube Preview"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
                     <div class="p-8">
-                        <p class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando">Case Study</p>
-                        <p class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase">Brand Storytelling</p>
+                        <p
+                            class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando"
+                        >
+                            Case Study
+                        </p>
+                        <p
+                            class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase"
+                        >
+                            Brand Storytelling
+                        </p>
                     </div>
                 </div>
             </ScrollReveal>
         </div>
 
         <!-- COLUMNA DERECHA (Instagram - Desfasada) -->
-        <div class="flex-1 flex flex-col gap-10 md:mt-24"> <!-- md:mt-24 crea el desfase bento -->
+        <div class="flex-1 flex flex-col gap-10 md:mt-24">
+            <!-- md:mt-24 crea el desfase bento -->
             <!-- INSTAGRAM 1 -->
-            <ScrollReveal client:load delay={0.1}>
-                <div class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-lima/20">
+            <ScrollReveal client:visible delay={0.1}>
+                <div
+                    class="group bg-nacho-negro rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-500 hover:shadow-nacho-lima/20"
+                >
                     <div class="aspect-video overflow-hidden">
-                        <Image src={ytThumb3} alt="Instagram Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <Image
+                            src={ytThumb3}
+                            alt="Instagram Preview"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
                     <div class="p-8">
-                        <p class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando">Contenido</p>
-                        <p class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase">Liderazgo humano</p>
+                        <p
+                            class="text-white/50 text-[10px] uppercase tracking-widest mb-2 font-bold font-zalando"
+                        >
+                            Contenido
+                        </p>
+                        <p
+                            class="text-nacho-lima text-2xl font-bold italic font-zalando uppercase"
+                        >
+                            Liderazgo humano
+                        </p>
                     </div>
                 </div>
             </ScrollReveal>
