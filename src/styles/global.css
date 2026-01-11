@@ -15,6 +15,13 @@ body {
   width: 100%;
 }
 
+/* para evitar parpadeos en renderizado */
+p, span, h1, h2 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern";
+}
+
 /* Forzar que los contenedores de RevealText tengan espacio para las letras */
 .reveal-text-container {
     padding-left: 0.1em;
@@ -34,19 +41,24 @@ body {
 
 /* Aquí cargamos la fuente (asegúrate de tener el archivo en public/fonts/) */
 @font-face {
-  font-family: 'Zalando Sans SemiExpanded';
-  src: url('/fonts/ZalandoSansSemiExpanded-Regular.ttf') format('truetype'); 
-  font-weight: 400;
+  font-family: 'Zalando Sans Variable';
+  src: url('/fonts/ZalandoSansSemiExpanded-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; /* Definimos el rango */
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Zalando Sans SemiExpanded';
-  src: url('/fonts/ZalandoSansSemiExpanded-Bold.ttf') format('truetype'); 
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Zalando Sans Variable';
+  src: url('/fonts/ZalandoSansSemiExpanded-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
   font-display: swap;
+}
+
+/* Actualizamos la variable global si la tenías */
+@theme {
+  --font-zalando: "Zalando Sans Variable", sans-serif;
 }
 
 :root {
