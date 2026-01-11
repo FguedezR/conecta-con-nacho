@@ -7,6 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://conecta-con-nacho.vercel.app', // URL de Vercel
   vite: {
     plugins: [tailwindcss()]
   },
