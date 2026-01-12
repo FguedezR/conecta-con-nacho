@@ -1,10 +1,16 @@
 ---
-import { RevealText } from './RevealText';
-import { ScrollReveal } from './ScrollReveal';
+import { RevealText } from "./RevealText";
+import { ScrollReveal } from "./ScrollReveal";
 ---
-<section id="inicio" class="min-h-screen w-full flex flex-col items-center justify-center bg-nacho-negro text-nacho-blanco px-8 relative overflow-hidden">
+
+<section
+  id="inicio"
+  class="min-h-screen w-full flex flex-col items-center justify-center bg-nacho-negro text-nacho-blanco px-2.5 md:px-8 relative overflow-hidden"
+>
   <div class="w-full max-w-7xl mx-auto text-center z-10">
-    <h1 class="text-[12vw] md:text-[9vw] font-zalando font-bold leading-[0.85] tracking-tighter uppercase inline-block">
+    <h1
+      class="text-[12vw] md:text-[9vw] font-zalando font-bold leading-[0.85] tracking-tighter uppercase inline-block"
+    >
       <div class="px-4">
         <RevealText client:load text="CONECTA" delay={0.2} />
       </div>
@@ -13,9 +19,14 @@ import { ScrollReveal } from './ScrollReveal';
       </div>
     </h1>
     <ScrollReveal client:load delay={0.8}>
-      <p class="mt-12 text-nacho-blanco/40 text-xs tracking-[0.5em] uppercase">Visual Identity System 2026</p>
+      <p class="mt-12 text-nacho-blanco/40 text-xs tracking-[0.5em] uppercase">
+        Visual Identity System 2026
+      </p>
     </ScrollReveal>
   </div>
   <!-- Indicador de scroll minimalista -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-nacho-lima to-transparent opacity-50"></div>
+  <div
+    class="absolute bottom-10 left-1/2 -translate-x-1/2 w-px h-20 bg-linear-to-b from-nacho-lima to-transparent opacity-50"
+  >
+  </div>
 </section>
