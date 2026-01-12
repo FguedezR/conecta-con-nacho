@@ -1,43 +1,53 @@
-# Astro Starter Kit: Minimal
+# ⚡️ Conecta con Nacho | Brand Identity Platform
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Bienvenido al repositorio oficial de la nueva identidad visual para la marca personal **Conecta con Nacho**. Esta plataforma es una presentación interactiva de alto impacto diseñada para mostrar el ecosistema visual de la marca, incluyendo tipografía variable, paleta cromática y estrategias de social media.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Vision General
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+La web ha sido construida bajo la premisa de **"Dinamismo y Conexión"**. Utilizando un enfoque de desarrollo moderno, se ha priorizado la velocidad de carga y la interactividad fluida (efecto *Antigravity*) para elevar la percepción premium de la marca personal.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Características Principales:
+- **Variable Font Tester**: Un motor interactivo (basado en Pangram Pangram) que interpola el peso de la tipografía *Zalando Sans* en tiempo real.
+- **Bento Social Grid**: Diseño asimétrico para la visualización de contenidos de YouTube e Instagram con efectos de revelación al scroll.
+- **Infinite Marquee**: Footer dinámico con tipografía masiva en movimiento infinito.
+- **Scroll Reveal System**: Animaciones escalonadas (*staggered*) que guían la atención del usuario sin interrumpir la navegación.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🎨 Identidad de Marca
 
-## 🧞 Commands
+### Tipografía
+- **Principal:** `Zalando Sans SemiExpanded` (Variable Font).
+- **Pesos:** 100 - 900.
 
-All commands are run from the root of the project, from a terminal:
+### Paleta de Colores
+- **Electric Lima:** `#E9FF27` (Energía y Atención).
+- **Deep Ocean:** `#000DFF` (Profundidad y Autoridad).
+- **Rich Black:** `#1B1D1C` (Estructura).
+- **Pure White:** `#FAFAFA` (Claridad).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🛠️ Stack Tecnológico
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Framework:** [Astro 4+](https://astro.build/) (Island Architecture para máxima velocidad).
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) (Motor de diseño basado en Vite).
+- **Animaciones:** [Framer Motion](https://www.framer.com/motion/) para las interacciones de UI y tipografía variable.
+- **Componentes:** React para micro-interacciones dinámicas.
+- **Despliegue:** Vercel (CI/CD conectado a este repositorio).
+
+---
+
+## 📦 Instalación y Uso
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/conecta-nacho.git
