@@ -1,9 +1,10 @@
 ---
 import "../styles/global.css";
 /* favicon */
-import faviconImg from "../assets/images/logo/favicon.png";
+import faviconImg     from "../assets/images/logo/favicon.png";
 
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights  from "@vercel/speed-insights/astro"
+import Analytics      from '@vercel/analytics/astro'
 
 interface Props {
   title: string;
@@ -26,6 +27,8 @@ const {
     <link rel="icon" type="image/png" href={faviconImg.src} />
     <meta name="generator" content={Astro.generator} />
     <SpeedInsights/>
+    <Analytics/>
+    
 
     <!-- SEO Básico -->
     <title>{title}</title>
