@@ -51,3 +51,15 @@ La web ha sido construida bajo la premisa de **"Dinamismo y Conexión"**. Utiliz
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/tu-usuario/conecta-nacho.git
+
+## ✦ Estructura Proyecto
+/
+├── public/
+│   └── fonts/          # Archivos de tipografía variable (.ttf)
+├── src/
+│   ├── assets/         # Imágenes optimizadas y logos
+│   ├── components/     # Componentes modulares (Hero, Tester, Grid, etc.)
+│   ├── layouts/        # Estructura base de la página y SEO
+│   ├── pages/          # Rutas de la web
+│   └── styles/         # CSS global y configuración de Tailwind
+└── astro.config.mjs    # Configuración de integraciones (React, Tailwind)
