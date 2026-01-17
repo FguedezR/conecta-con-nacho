@@ -52,14 +52,33 @@ La web ha sido construida bajo la premisa de **"Dinamismo y Conexión"**. Utiliz
    ```bash
    git clone https://github.com/tu-usuario/conecta-nacho.git
 
-## ✦ Estructura Proyecto
-`/
+## 🩻 Estructura Proyecto
+```/
 ├── public/
-│   └── fonts/          # Archivos de tipografía variable (.ttf)
+│   ├── fonts/              # Tipografías variables (.ttf)
+│   └── favicon.svg         # Icono de la pestaña del navegador
 ├── src/
-│   ├── assets/         # Imágenes optimizadas y logos
-│   ├── components/     # Componentes modulares (Hero, Tester, Grid, etc.)
-│   ├── layouts/        # Estructura base de la página y SEO
-│   ├── pages/          # Rutas de la web
-│   └── styles/         # CSS global y configuración de Tailwind
-└── astro.config.mjs    # Configuración de integraciones (React, Tailwind)`
+│   ├── assets/             # Recursos optimizados por Astro
+│   │   └── images/
+│   │       ├── logo/       # Logotipos y favicons
+│   │       └── social/     # Miniaturas de YouTube e Instagram
+│   ├── components/         # Componentes modulares y reactivos
+│   │   ├── ColorPalette.astro
+│   │   ├── Hero.astro
+│   │   ├── LogoSection.astro
+│   │   ├── Navbar.astro
+│   │   ├── RevealText.tsx
+│   │   ├── ScrollCarousel.astro
+│   │   ├── ScrollReveal.tsx
+│   │   ├── SocialMedia.astro
+│   │   ├── TypographySection.astro
+│   │   └── VariableTester.tsx
+│   ├── layouts/            # Plantillas de página y configuración SEO
+│   │   └── Layout.astro
+│   ├── pages/              # Rutas de la aplicación
+│   │   └── index.astro
+│   └── styles/             # CSS Global y variables de Tailwind v4
+│       └── global.css
+├── astro.config.mjs        # Configuración de Astro y Plugins
+├── package.json            # Dependencias y Scripts de Node
+└── tsconfig.json           # Configuración de TypeScript```
